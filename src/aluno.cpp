@@ -7,7 +7,7 @@
 
 using json = nlohmann::ordered_json;
 
-const std::string PESSOAS_PATH = "./data/pessoas.json";
+const std::string PESSOAS_PATH = "./data/alunos.json";
 
 void alunoCadastrar(
     std::string nome,
