@@ -1,0 +1,12 @@
+[
+    {
+        "nome": "Gabriel Possela",
+        "cpf": "46846142800",
+        "senha": "123",
+        "nascimento": "08/12/2004",
+        "telefone": "19978129148",
+        "email": "gabrielfilipeposs@hotmail.com",
+        "endereco": "Jardim Jandyra. Rua Benedito Leonel, 715",
+        "numero_plano": "2"
+    }
+]
