@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/aluno.hpp"
+#include "../include/login.hpp"
 
 int main() {
 
@@ -22,13 +23,19 @@ int main() {
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
 )";
-    std::cout << "~~L O G I N~~ [[ Academia Trono da Verdade ]]\n";
+    std::cout << "\n~~L O G I N~~ [[ Academia Trono da Verdade ]]\n\n";
 
     std::cout << "Você deseja fazer LogIn como Aluno ou Instrutor?\n";
     std::cout << "[1] Aluno\n[2] Instrutor\n>> ";
 
-    int choice;
-    std::cin >> choice;
+    std::string choiceStr;
+    std::getline(std::cin, choiceStr);
+
+    int choice = std::stoi(choiceStr);
+
+    login(choice);
+
+    // aluno();
 
     return 0;
 }
