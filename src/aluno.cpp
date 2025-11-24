@@ -12,6 +12,7 @@ const std::string ALUNOS_PATH = "./data/alunos.json";
 void alunoCadastrar(
     std::string nome,
     std::string cpf,
+    std::string senha,
     std::string nascimento,
     std::string telefone,
     std::string email,
@@ -25,7 +26,7 @@ void aluno();
 
 void aluno()
 {
-    std::string nome, cpf, nascimento, telefone, email, endereco, numero_plano;
+    std::string nome, cpf, senha, nascimento, telefone, email, endereco, numero_plano;
 
     std::cout << "Nome: ";
     std::getline(std::cin, nome);
@@ -51,12 +52,13 @@ void aluno()
     std::cout << "\n";
 
 
-    alunoCadastrar(nome, cpf, nascimento, telefone, email, endereco, numero_plano);
+    alunoCadastrar(nome, cpf, senha, nascimento, telefone, email, endereco, numero_plano);
 }
 
 void alunoCadastrar(
     std::string nome,
     std::string cpf,
+    std::string senha,
     std::string nascimento,
     std::string telefone,
     std::string email,
@@ -67,6 +69,7 @@ void alunoCadastrar(
     std::unordered_map<std::string, std::string> aluno_dados = {
         {"nome", nome},
         {"cpf", cpf},
+        {"senha", senha},
         {"nascimento", nascimento},
         {"telefone", telefone},
         {"email", email},
@@ -75,7 +78,7 @@ void alunoCadastrar(
     };
 
     std::vector<std::string> ordem = {
-        "nome", "cpf", "nascimento", "telefone", "email", "endereco", "numero_plano"
+        "nome", "cpf", "senha", "nascimento", "telefone", "email", "endereco", "numero_plano"
     };
 
     json novaPessoa;
